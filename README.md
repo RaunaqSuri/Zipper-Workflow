@@ -1,5 +1,6 @@
 Zipper-Workflow
 ===============
+//Also does testing now too
 
 My first workflow for Seqware. It zips two text files into one zip. Seqware is very confusing and by spending roughly 2 days just trying to write this simple workflow, I seem to have gained a lot of understanding. The two input files are "input1.txt" and "input2.txt" and the final output is in data/zippedup.zip. The file is also uploaded to seqware-resutls when actually run with seqware.
 
