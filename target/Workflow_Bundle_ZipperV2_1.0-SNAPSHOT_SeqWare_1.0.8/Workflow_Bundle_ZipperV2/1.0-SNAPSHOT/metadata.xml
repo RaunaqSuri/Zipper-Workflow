@@ -1,0 +1,9 @@
+<bundle version="1.0-SNAPSHOT">
+  <workflow name="ZipperV2" version="1.0-SNAPSHOT" seqware_version="1.0.8"
+  basedir="${workflow_bundle_dir}/Workflow_Bundle_ZipperV2/1.0-SNAPSHOT">
+    <description>Add a description of the workflow here.</description>
+    <workflow_class path="${workflow_bundle_dir}/Workflow_Bundle_ZipperV2/1.0-SNAPSHOT/classes/com/mycompany/zipperv2/WorkflowClient.java"/>
+    <config path="${workflow_bundle_dir}/Workflow_Bundle_ZipperV2/1.0-SNAPSHOT/config/workflow.ini"/>
+    <requirements compute="single" memory="20M" network="local"  workflow_engine="Pegasus,Oozie" workflow_type="java"/>
+  </workflow>
+</bundle>

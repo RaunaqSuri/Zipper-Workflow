@@ -15,7 +15,7 @@ public class WorkflowClient extends OicrWorkflow {
     
     //workflow parameters
     private String queue = null;
-    private String inputFiles = null;
+    private String inputFile = null;
     private String binDir = null;
     private String dataDir = null;
     private Boolean manualOutput= false;
@@ -32,7 +32,7 @@ public class WorkflowClient extends OicrWorkflow {
         //Loads the workflow parameters from the .ini file
         try{
             manualOutput = Boolean.valueOf(getProperty("manual_output"));
-            inputFiles = getProperty("input_Files");
+            inputFile = getProperty("input_file");
             queue = getOptionalProperty("queue" , "");
             
         } catch (Exception ex) {
@@ -48,15 +48,20 @@ public class WorkflowClient extends OicrWorkflow {
 
 
         // register an input file
-        int fileNumber = 0;
         
         //splits up the paths of the individual files and stores them (check config for details)
-        for (String inputFilePath : inputFiles.split(",")) {
-            SqwFile file = this.createFile("file_in_" + fileNumber++);
-            file.setSourcePath(inputFilePath);
-            file.setType("pleaseWork");
-            file.setIsInput(true);
-        }
+        
+        String inputFilePath = inputFile;
+        SqwFile file = this.createFile("file_in_0");
+        file.setSourcePath(inputFilePath);
+        file.setType("application/bam");
+        file.setIsInput(true);
+//        for (String inputFilePath : inputFiles.split(",")) {
+//            SqwFile file = this.createFile("file_in_" + fileNumber++);
+//            file.setSourcePath(inputFilePath);
+//            file.setType("text/plain");
+//            file.setIsInput(true);
+//        }
         return this.getFiles();
 
       
@@ -84,10 +89,10 @@ public class WorkflowClient extends OicrWorkflow {
         //runs the bash command to zip the files
         Job job = getWorkflow().createBashJob("Zip");
         Command command = job.getCommand();
-        command.addArgument("zip");
+        command.addArgument("zip -j");
         command.addArgument(dataDir + outputZip);
         
-        //Adds the two files that must be zipped
+        //Adds the file that must be zipped
         for ( Map.Entry<String, SqwFile> file : this.getFiles().entrySet() ) {
             command.addArgument(file.getValue().getProvisionedPath());
         }

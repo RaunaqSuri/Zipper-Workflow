@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="8" passed="8">
+  <reporter-output>
+  </reporter-output>
+  <suite name="TestSuite1" duration-ms="81395" started-at="2014-01-22T21:34:49Z" finished-at="2014-01-22T21:36:10Z">
+    <groups>
+    </groups>
+    <test name="Test1" duration-ms="81395" started-at="2014-01-22T21:34:49Z" finished-at="2014-01-22T21:36:10Z">
+      <class name="ca.on.oicr.pde.common.WorkflowRunTest">
+        <test-method status="PASS" signature="workflowCommon()[pri:0, instance:WorkflowRunTest_1_ZipperV2-1.0-SNAPSHOT]" name="workflowCommon" is-config="true" duration-ms="15" started-at="2014-01-22T16:34:49Z" finished-at="2014-01-22T16:34:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- workflowCommon -->
+        <test-method status="PASS" signature="workflowSpecific()[pri:0, instance:WorkflowRunTest_1_ZipperV2-1.0-SNAPSHOT]" test-instance-name="WorkflowRunTest_0_ZipperV2-1.0-SNAPSHOT" name="workflowSpecific" is-config="true" duration-ms="32" started-at="2014-01-22T16:34:49Z" finished-at="2014-01-22T16:34:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- workflowSpecific -->
+        <test-method status="PASS" signature="workflowSpecific()[pri:0, instance:WorkflowRunTest_1_ZipperV2-1.0-SNAPSHOT]" test-instance-name="WorkflowRunTest_1_ZipperV2-1.0-SNAPSHOT" name="workflowSpecific" is-config="true" duration-ms="4" started-at="2014-01-22T16:34:49Z" finished-at="2014-01-22T16:34:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- workflowSpecific -->
+        <test-method status="PASS" signature="initializeEnvironment()[pri:0, instance:WorkflowRunTest_0_ZipperV2-1.0-SNAPSHOT]" test-instance-name="WorkflowRunTest_0_ZipperV2-1.0-SNAPSHOT" name="initializeEnvironment" duration-ms="221" started-at="2014-01-22T16:34:49Z" finished-at="2014-01-22T16:34:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeEnvironment -->
+        <test-method status="PASS" signature="initializeEnvironment()[pri:0, instance:WorkflowRunTest_1_ZipperV2-1.0-SNAPSHOT]" test-instance-name="WorkflowRunTest_1_ZipperV2-1.0-SNAPSHOT" name="initializeEnvironment" duration-ms="217" started-at="2014-01-22T16:34:49Z" finished-at="2014-01-22T16:34:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeEnvironment -->
+        <test-method status="PASS" signature="executeWorkflow()[pri:0, instance:WorkflowRunTest_1_ZipperV2-1.0-SNAPSHOT]" test-instance-name="WorkflowRunTest_1_ZipperV2-1.0-SNAPSHOT" name="executeWorkflow" duration-ms="80832" started-at="2014-01-22T16:34:49Z" depends-on-methods="ca.on.oicr.pde.common.WorkflowRunTest.initializeEnvironment" finished-at="2014-01-22T16:36:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- executeWorkflow -->
+        <test-method status="PASS" signature="executeWorkflow()[pri:0, instance:WorkflowRunTest_0_ZipperV2-1.0-SNAPSHOT]" test-instance-name="WorkflowRunTest_0_ZipperV2-1.0-SNAPSHOT" name="executeWorkflow" duration-ms="80825" started-at="2014-01-22T16:34:49Z" depends-on-methods="ca.on.oicr.pde.common.WorkflowRunTest.initializeEnvironment" finished-at="2014-01-22T16:36:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- executeWorkflow -->
+        <test-method status="PASS" signature="checkWorkflowOutputExists()[pri:0, instance:WorkflowRunTest_0_ZipperV2-1.0-SNAPSHOT]" test-instance-name="WorkflowRunTest_0_ZipperV2-1.0-SNAPSHOT" name="checkWorkflowOutputExists" duration-ms="6" started-at="2014-01-22T16:36:10Z" depends-on-methods="ca.on.oicr.pde.common.WorkflowRunTest.executeWorkflow" finished-at="2014-01-22T16:36:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkWorkflowOutputExists -->
+        <test-method status="PASS" signature="checkWorkflowOutputExists()[pri:0, instance:WorkflowRunTest_1_ZipperV2-1.0-SNAPSHOT]" test-instance-name="WorkflowRunTest_1_ZipperV2-1.0-SNAPSHOT" name="checkWorkflowOutputExists" duration-ms="4" started-at="2014-01-22T16:36:10Z" depends-on-methods="ca.on.oicr.pde.common.WorkflowRunTest.executeWorkflow" finished-at="2014-01-22T16:36:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkWorkflowOutputExists -->
+        <test-method status="PASS" signature="compareOutputToExpected()[pri:0, instance:WorkflowRunTest_1_ZipperV2-1.0-SNAPSHOT]" test-instance-name="WorkflowRunTest_1_ZipperV2-1.0-SNAPSHOT" name="compareOutputToExpected" duration-ms="209" started-at="2014-01-22T16:36:10Z" depends-on-methods="ca.on.oicr.pde.common.WorkflowRunTest.checkWorkflowOutputExists" finished-at="2014-01-22T16:36:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- compareOutputToExpected -->
+        <test-method status="PASS" signature="compareOutputToExpected()[pri:0, instance:WorkflowRunTest_0_ZipperV2-1.0-SNAPSHOT]" test-instance-name="WorkflowRunTest_0_ZipperV2-1.0-SNAPSHOT" name="compareOutputToExpected" duration-ms="268" started-at="2014-01-22T16:36:10Z" depends-on-methods="ca.on.oicr.pde.common.WorkflowRunTest.checkWorkflowOutputExists" finished-at="2014-01-22T16:36:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- compareOutputToExpected -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:WorkflowRunTest_1_ZipperV2-1.0-SNAPSHOT]" test-instance-name="WorkflowRunTest_1_ZipperV2-1.0-SNAPSHOT" name="afterTest" is-config="true" duration-ms="0" started-at="2014-01-22T16:36:10Z" finished-at="2014-01-22T16:36:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:WorkflowRunTest_1_ZipperV2-1.0-SNAPSHOT]" test-instance-name="WorkflowRunTest_0_ZipperV2-1.0-SNAPSHOT" name="afterTest" is-config="true" duration-ms="0" started-at="2014-01-22T16:36:10Z" finished-at="2014-01-22T16:36:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- ca.on.oicr.pde.common.WorkflowRunTest -->
+    </test> <!-- Test1 -->
+  </suite> <!-- TestSuite1 -->
+</testng-results>
